@@ -1,36 +1,40 @@
 # 🗓️ Day Planner
 
-A simple and responsive web-based day planning tool built with HTML, CSS, and JavaScript. This project was developed as part of the internship at **Brainwave Matrix Solutions**.
+A simple and responsive web-based task scheduler built using HTML, CSS, and JavaScript. This project was developed as part of the internship at **Brainwave Matrix Solutions**.
 
 ## 🚀 Features
 
-- Select a time (from 01 AM to 12 AM)
-- Add custom tasks
-- Mark tasks as **Done** (strike-through) or **Undo**
-- Delete tasks individually
+- Dynamically generated time slots (01 AM to 12 AM)
+- Add tasks with associated time
+- Mark tasks as **Done** or **Undo** (toggle)
+- **Delete** tasks individually
 - Tasks are **automatically sorted** by time
-- Tasks persist using **localStorage**
-- Fully responsive for desktop and mobile devices
-- Enter key works as shortcut for the Add button
+- Tasks are **saved in localStorage** and persist across sessions
+- Works with both **Add button** and **Enter key**
+- Fully **responsive design** for desktop and mobile
 
 ## 🧩 Tech Stack
 
-- **HTML5**
-- **CSS3**
-- **Vanilla JavaScript (ES6)**
-- **localStorage** (for data persistence)
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- localStorage (for persistence)
 
-## 📁 Files Overview
+## 📁 File Structure
 
-- `Dayplan.html` — Main HTML layout of the planner
-- `Dayplan.css` — Styles for UI and responsiveness
-- `Dayplan.js` — Functionality for task handling, sorting, marking done, and deleting
+- `Dayplan.html` – Base HTML structure
+- `Dayplan.css` – Styling and responsive layout
+- `Dayplan.js` – Application logic and task handling
 
 ## 🛠️ How to Run Locally
 
-Simply **open the `Dayplan.html` file in any modern web browser** (like Chrome, Firefox, or Edge). No additional setup is required.
+1. Download or clone the repository.
+2. Open the file `Dayplan.html` in any modern web browser (e.g., Chrome, Firefox, Edge).
+3. Start adding and managing your daily tasks!
 
-## 📇 Author
+No installation or dependencies required.
+
+## 👨‍💻 Author
 
 **CH Harshavardhan Reddy**  
 Intern at Brainwave Matrix Solutions  
