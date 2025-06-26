@@ -32,6 +32,26 @@ const timeMap = {
   "12 AM": 0
 };
 
+// Generate <option> elements dynamically
+function generateTimeOptions() {
+  const times = [];
+
+  for (let h = 1; h <= 24; h++) {
+    let hour = h % 12 === 0 ? 12 : h % 12;
+    let period = h < 12 || h === 24 ? 'AM' : 'PM';
+    let formatted = hour.toString().padStart(2, '0') + ' ' + period;
+    times.push(formatted);
+  }
+
+  times.forEach(time => {
+    const option = document.createElement('option');
+    option.value = time;
+    option.textContent = time;
+    timeSelect.appendChild(option);
+  });
+}
+
+// Render tasks
 function renderTasks() {
   taskList.innerHTML = '';
   tasks.sort((a, b) => timeMap[a.time] - timeMap[b.time]);
@@ -43,7 +63,6 @@ function renderTasks() {
     const taskText = document.createElement('span');
     taskText.textContent = `${taskObj.time} - ${taskObj.task}`;
 
-    // Done Button
     const doneBtn = document.createElement('button');
     doneBtn.textContent = taskObj.completed ? "Undo" : "Done";
     doneBtn.className = 'done-btn';
@@ -53,11 +72,10 @@ function renderTasks() {
       renderTasks();
     };
 
-    // Delete Button
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "Delete";
     deleteBtn.className = 'done-btn';
-    deleteBtn.style.background = '#ef4444'; // Red
+    deleteBtn.style.background = '#ef4444';
     deleteBtn.onclick = () => {
       tasks.splice(index, 1);
       localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -71,6 +89,7 @@ function renderTasks() {
   });
 }
 
+// Add task
 addBtn.onclick = () => {
   const time = timeSelect.value;
   const task = taskInput.value.trim();
@@ -86,10 +105,15 @@ addBtn.onclick = () => {
   timeSelect.value = '';
 };
 
+// Enable Enter key
 taskInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     addBtn.click();
   }
 });
 
-window.onload = renderTasks;
+// On page load
+window.onload = () => {
+  generateTimeOptions();
+  renderTasks();
+};
