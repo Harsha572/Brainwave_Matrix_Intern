@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Logs and system files
+*.log
+*.tmp
+
+# Environment/config files (if ever added)
+.env
