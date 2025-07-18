@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="products.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .filters {
+      width: 250px;
+      padding: 2rem 1rem;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+    }
+
+    .filters input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .filters h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #111;
+    }
+
+    .filters ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .filters ul li {
+      cursor: pointer;
+      margin: 0.5rem 0;
+      color: #555;
+    }
+
+    .star-filter {
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .star-filter.selected span {
+      color: #007bff;
+    }
+
+    .clear-filters {
+      margin-top: 2rem;
+      background: none;
+      border: 1px solid #007bff;
+      color: #007bff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-grid {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="home.html"><img src="logo.png" alt="Logo" /></a>
+    <nav>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
+      <a href="products.html">Products</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="bag.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+  <div class="container">
+    <aside class="filters show">
+      <input type="text" id="search" placeholder="Search">
+      <h3>Category</h3>
+      <ul id="category-filters">
+        <li data-category="men's clothing">Men's Clothing</li>
+        <li data-category="women's clothing">Women's Clothing</li>
+        <li data-category="jewelery">Jewelry</li>
+        <li data-category="electronics">Electronics</li>
+      </ul>
+      <h3>Rating</h3>
+      <div id="rating-filters">
+        <div class="star-filter" data-rating="4">
+          <span>⭐⭐⭐⭐☆</span> & up
+        </div>
+        <div class="star-filter" data-rating="3">
+          <span>⭐⭐⭐☆☆</span> & up
+        </div>
+        <div class="star-filter" data-rating="2">
+          <span>⭐⭐☆☆☆</span> & up
+        </div>
+        <div class="star-filter" data-rating="1">
+          <span>⭐☆☆☆☆</span> & up
+        </div>
+      </div>
+      <button class="clear-filters">Clear Filters</button>
+    </aside>
+    <main class="product-grid" id="product-list">
+    </main>
+  </div>
+  <script src="products.js"></script>
+</body>
+</html>

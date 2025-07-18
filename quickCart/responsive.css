@@ -1,0 +1,89 @@
+/* ✅ responsive.css (fully updated with nav layout fix) */
+
+@media (max-width: 480px) {
+  .product div[style*="display: flex"] {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .product button {
+    width: 100%;
+  }
+
+  .empty-wishlist p {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .save-now {
+    width: fit-content;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Keep filters and grid side-by-side on all screens */
+@media (max-width: 1024px), (max-width: 768px) {
+  .container {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+
+  .filters {
+    width: 35vw;
+    height: auto;
+    border-right: 1px solid #ddd;
+    border-bottom: none;
+    display: flex !important;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .product-grid {
+    width: 65vw;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .product {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  header a img {
+    height: 40px;
+    margin-bottom: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  nav a, nav button {
+    font-size: 1rem;
+    margin: 0;
+    color: #fcd34d;
+  }
+
+  .filters input[type="text"] {
+    width: 100%;
+  }
+
+  .top img {
+    height: 120px;
+  }
+}

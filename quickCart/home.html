@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickCart - Stand Out in Style</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header>
+    <a href="home.html"><img src="logo.png" alt="QuickCart" /></a>
+    <nav>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
+      <a href="products.html">Products</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="bag.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Stand Out. Stay Stylish.</h1>
+    <p>Discover fashion that fits your vibe. Your next favorite outfit is just a click away.</p>
+    <div class="btn-group">
+      <a href="products.html">Browse Products</a>
+      <a href="bag.html">View Cart</a>
+    </div>
+  </section>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById('cart-count').textContent = cart.length;
+  </script>
+</body>
+</html>
