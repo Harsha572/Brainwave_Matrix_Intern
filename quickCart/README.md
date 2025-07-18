@@ -32,13 +32,8 @@ A responsive web application built using HTML, CSS, and JavaScript that allows u
 
 ## 🚀 Getting Started
 
-### 1. Clone or Download the Repository
-
-bash
-git clone https://github.com/Harsha572/Brainwave_Matrix_Intern/QuickCart.git
-cd quickCart
-
-> Alternatively, you can just download the ZIP and extract it.
+### 1. Download the Repository
+You can just download the ZIP and extract it.
 
 ### 2. Run the Application
 
